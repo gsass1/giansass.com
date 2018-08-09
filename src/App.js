@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import './App.css';
 import Icon from './Icon.js'
 import Project from './Project.js'
 import NavLink from './NavLink.js'
-import './App.css';
+
+import bg from './bg.jpg';
 import ponysfm from './ponysfm.png';
 import workshop from './workshop.png';
 import ntop from './ntop.png';
@@ -96,7 +98,7 @@ class App extends Component {
           </ul>
         </aside>
         <main className='main'>
-          <section ref={this.infoSection} className='block block--centered block--welcome inverse'>
+          <section ref={this.infoSection} className='block block--centered block--welcome inverse' style={{background: 'url('+bg+') center center fixed'}}>
             <div className='block__container'>
               <h1 className='block__header uppercase fadein-1s scale-1s'>
                 Hi, I am Gian
@@ -132,19 +134,19 @@ class App extends Component {
               <div className='projects'>
                 {
                   this.state.projects.map(function(project, i) {
-                    return (<Project name={project.name} url={project.url} image={project.image} description={project.description} />);
+                    return (<Project key={i} name={project.name} url={project.url} image={project.image} description={project.description} />);
                   })
                 }
               </div>
 
             </div>
           </section>
-          <footer className='footer inverse'>
-            <div className='footer__content'>
-              <p className='footer__copyright'>Copyright &copy; 2018 Gian Sass</p>
-            </div>
-          </footer>
         </main>
+        <footer className='footer inverse'>
+          <div className='footer__content'>
+            <p className='footer__copyright paragraph'>Copyright &copy; 2018 Gian Sass</p>
+          </div>
+        </footer>
       </div>
     );
   }

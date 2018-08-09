@@ -117,19 +117,19 @@ ul.iconlist {
 
 .icon {
   font-size: 0.8em;
-  color: var(--accent-highlight);
+  color: var(--bg);
   width: 1em;
   border-radius: 50%;
-  border: 2px solid var(--accent-highlight);
+  border: 2px solid var(--bg);
   height: 1em;
   transition: all 0.8s;
   padding: 10px;
 }
 
 .icon:hover {
-  color: var(--fg);
-  border-color: var(--fg);
-  background: var(--accent-highlight);
+  color: var(--accent-highlight);
+  border-color: var(--accent-highlight);
+  background: var(--bg);
   transform: scale(1.2);
 }
 
