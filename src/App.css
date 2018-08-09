@@ -148,7 +148,7 @@ ul.iconlist {
 }
 
 .footer {
-  height: 100px;
+  height: 150px;
 }
 
 .footer__content {
@@ -163,7 +163,7 @@ ul.iconlist {
   font-size: 1.2em;
 }
 
-.aside {
+.navbar {
   position: fixed;
   height: 100vh;
   width: 150px;

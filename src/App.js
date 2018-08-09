@@ -90,7 +90,7 @@ class App extends Component {
   render() {
     return (
       <div className='container'>
-        <aside className='aside desktop'>
+        <aside className='navbar desktop'>
           <ul className='nav'>
             <NavLink targetRef={this.infoSection} ref={this.navLinks[0]} onClick={(node) => this.selectNavItem(node)} title='Info' />
             <NavLink targetRef={this.aboutMeSection} ref={this.navLinks[1]} onClick={(node) => this.selectNavItem(node)} title='About Me' />
@@ -144,7 +144,7 @@ class App extends Component {
         </main>
         <footer className='footer inverse'>
           <div className='footer__content'>
-            <p className='footer__copyright paragraph'>Copyright &copy; 2018 Gian Sass</p>
+            <p className='footer__copyright'>Copyright &copy; 2018 Gian Sass</p>
           </div>
         </footer>
       </div>
