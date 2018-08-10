@@ -49,7 +49,8 @@ class App extends Component {
     let currentSection = this.navLinks[0].current;
     for(var i = 0; i < 3; ++i) {
       const link = this.navLinks[i];
-      if(window.pageYOffset > link.current.props.targetRef.current.offsetTop) {
+      const margin = 50;
+      if(window.pageYOffset > Math.max(0, link.current.props.targetRef.current.offsetTop - margin)) {
         currentSection = link.current;
       }
     }

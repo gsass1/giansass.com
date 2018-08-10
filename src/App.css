@@ -187,16 +187,22 @@ ul.iconlist {
 
 ul.nav {
   list-style: none;
+  width: 100%;
 }
 
 .nav__item {
   color: #fff;
   margin-bottom: 1em;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
 }
 
 .nav__item--active {
   font-weight: 800;
+  background: #121212;
 }
 
 .projects {
