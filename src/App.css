@@ -74,6 +74,7 @@ h1, h2, h3 {
 
 .block--welcome {
   position: relative;
+  background-size: cover;
 }
 
 .block__header {
@@ -216,6 +217,7 @@ ul.nav {
 }
 
 .project__image {
+  width: 100%;
   max-width: 500px;
   height: auto;
   transition: opacity 0.5s;
