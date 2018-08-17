@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Icon from './Icon.js'
-import Project from './Project.js'
-import NavLink from './NavLink.js'
 
-import bg from './bg.jpg';
+import Icon from './Icon.js'
+import NavLink from './NavLink.js'
+import Project from './Project.js'
+
+import ntop from './ntop.png';
 import ponysfm from './ponysfm.png';
 import workshop from './workshop.png';
-import ntop from './ntop.png';
 
 class App extends Component {
   iconLinks = [
