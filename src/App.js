@@ -99,13 +99,14 @@ class App extends Component {
           </ul>
         </aside>
         <main className='main'>
-          <section ref={this.infoSection} className='block block--centered block--welcome inverse' style={{background: 'url('+bg+') center center fixed'}}>
+          <section ref={this.infoSection} className='block block--centered block--welcome inverse'>
             <div className='block__container'>
               <h1 className='block__header uppercase fadein-1s scale-1s'>
                 Hi, I am Gian
               </h1>
               <ul className='iconlist fadein-2s'>
                 <Icon url='mailto:gian.sass@outlook.de' iconClass='fa-envelope' />
+                <Icon url='https://twitter.com/GianSass' iconClass='fa-twitter' />
                 <Icon url='https://github.com/Nuke928' iconClass='fa-github' />
                 <Icon url='https://giansass.com/blog' iconClass='fa-wordpress' />
               </ul>
