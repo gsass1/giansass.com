@@ -10,27 +10,47 @@ import workshop from './workshop.png';
 import ntop from './ntop.png';
 
 class App extends Component {
+  iconLinks = [
+    {
+      url: 'mailto:gian.sass@outlook.de',
+      iconClass: 'fa-envelope'
+    },
+    {
+      url: 'https://twitter.com/GianSass',
+      iconClass: 'fa-twitter'
+    },
+    {
+      url: 'https://github.com/Nuke928',
+      iconClass: 'fa-github'
+    },
+    {
+      url: 'https://giansass.com/blog',
+      iconClass: 'fa-wordpress'
+    },
+  ];
+
+  projects = [
+    {
+      name: 'PonySFM',
+      url: 'https://ponysfm.com',
+      image: ponysfm,
+      description: 'A platform sharing highly curated Source Filmmaker resources'
+    },
+    {
+      name: 'PonySFM Workshop',
+      url: 'https://workshop.ponysfm.com',
+      image: workshop,
+      description: 'The PonySFM Workshop app manages all your SFM mods, creating a distraction-free environment for creativity'
+    },
+    {
+      name: 'NTop',
+      url: 'https://github.com/Nuke928/NTop',
+      image: ntop,
+      description: 'htop-like system-monitor with Vi-emulation for Windows'
+    }
+  ];
+
   state = {
-    projects: [
-      {
-        name: 'PonySFM',
-        url: 'https://ponysfm.com',
-        image: ponysfm,
-        description: 'A platform sharing highly curated Source Filmmaker resources'
-      },
-      {
-        name: 'PonySFM Workshop',
-        url: 'https://workshop.ponysfm.com',
-        image: workshop,
-        description: 'The PonySFM Workshop app manages all your SFM mods, creating a distraction-free environment for creativity'
-      },
-      {
-        name: 'NTop',
-        url: 'https://github.com/Nuke928/NTop',
-        image: ntop,
-        description: 'htop-like system-monitor with Vi-emulation for Windows'
-      }
-    ],
     scrolling: false
   };
   
@@ -105,10 +125,11 @@ class App extends Component {
                 Hi, I am Gian
               </h1>
               <ul className='iconlist fadein-2s'>
-                <Icon url='mailto:gian.sass@outlook.de' iconClass='fa-envelope' />
-                <Icon url='https://twitter.com/GianSass' iconClass='fa-twitter' />
-                <Icon url='https://github.com/Nuke928' iconClass='fa-github' />
-                <Icon url='https://giansass.com/blog' iconClass='fa-wordpress' />
+                {
+                  this.iconLinks.map(function(icon, i) {
+                    return (<Icon url={icon.url} iconClass={icon.iconClass} />);
+                  })
+                }
               </ul>
               <div className='scroll' onClick={() => this.scrollToContent()}>
               </div>
@@ -135,7 +156,7 @@ class App extends Component {
               </h1>
               <div className='projects'>
                 {
-                  this.state.projects.map(function(project, i) {
+                  this.projects.map(function(project, i) {
                     return (<Project key={i} name={project.name} url={project.url} image={project.image} description={project.description} />);
                   })
                 }
@@ -150,7 +171,7 @@ class App extends Component {
           </div>
         </footer>
       </div>
-    );
+    )
   }
 }
 
