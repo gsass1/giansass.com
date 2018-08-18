@@ -63,7 +63,7 @@ class App extends Component {
     }
   }
 
-  onScroll = () => {
+  onScroll()  {
     let currentSection = this.navLinks[0].current;
     for(let i = 0; i < this.navLinks.length; ++i) {
       const link = this.navLinks[i];
@@ -77,12 +77,12 @@ class App extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.onScroll);
+    window.addEventListener('scroll', this.onScroll.bind(this));
     this.makeNavItemActive(this.navLinks[0].current);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('scroll', this.onScroll.bind(this));
   }
 
   makeNavItemActive(item) {
@@ -120,7 +120,7 @@ class App extends Component {
               </h1>
               <ul className='iconlist fadein-2s'>
                 {
-                  this.iconLinks.map(function(icon, i) {
+                  this.iconLinks.map((icon, i) => {
                     return (<Icon url={icon.url} iconClass={icon.iconClass} />);
                   })
                 }
@@ -150,7 +150,7 @@ class App extends Component {
               </h1>
               <div className='projects'>
                 {
-                  this.projects.map(function(project, i) {
+                  this.projects.map((project, i) => {
                     return (<Project key={i} name={project.name} url={project.url} image={project.image} description={project.description} />);
                   })
                 }
