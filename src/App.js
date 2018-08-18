@@ -49,25 +49,23 @@ class App extends Component {
       description: 'htop-like system-monitor with Vi-emulation for Windows'
     }
   ];
-
-  state = {
-    scrolling: false
-  };
   
   constructor(props) {
     super(props);
-    this.navLinks = new Array(3);
-    for(var i = 0; i < 3; ++i) {
-      this.navLinks[i] = React.createRef();
-    }
+
     this.infoSection = React.createRef();
     this.aboutMeSection = React.createRef();
     this.projectSection = React.createRef();
+
+    this.navLinks = new Array(3);
+    for(let i = 0; i < this.navLinks.length; ++i) {
+      this.navLinks[i] = React.createRef();
+    }
   }
 
   onScroll = () => {
     let currentSection = this.navLinks[0].current;
-    for(var i = 0; i < 3; ++i) {
+    for(let i = 0; i < this.navLinks.length; ++i) {
       const link = this.navLinks[i];
       const margin = 50;
       if(window.pageYOffset > Math.max(0, link.current.props.targetRef.current.offsetTop - margin)) {
@@ -88,21 +86,17 @@ class App extends Component {
   }
 
   makeNavItemActive(item) {
-    for(var i = 0; i < 3; ++i) {
+    for(let i = 0; i < this.navLinks.length; ++i) {
       const link = this.navLinks[i];
       link.current.setActive(false);
     }
 
     item.setActive(true);
-    this.setState({scrolling: true});
   }
 
   selectNavItem(item) {
-    //this.makeNavItemActive(item);
     item.props.targetRef.current.scrollIntoView({behavior: 'smooth'});
   }
-
-  onStartNodeMount = (node) => this.startNode = node
 
   scrollToContent() {
     this.aboutMeSection.current.scrollIntoView({behavior: 'smooth'});
@@ -121,7 +115,7 @@ class App extends Component {
         <main className='main'>
           <section ref={this.infoSection} className='block block--centered block--welcome inverse'>
             <div className='block__container'>
-              <h1 className='block__header uppercase fadein-1s scale-1s'>
+              <h1 className='block__header uppercase fadein-1s'>
                 Hi, I am Gian
               </h1>
               <ul className='iconlist fadein-2s'>
@@ -161,7 +155,6 @@ class App extends Component {
                   })
                 }
               </div>
-
             </div>
           </section>
         </main>
