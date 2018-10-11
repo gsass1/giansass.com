@@ -82,6 +82,7 @@ h1, h2, h3 {
   font-size: 5em;
   font-weight: 800;
   display: block;
+  padding-bottom: 0px;
 }
 
 .block__header--medium {
