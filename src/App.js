@@ -160,7 +160,7 @@ class App extends Component {
         </main>
         <footer className='footer inverse'>
           <div className='footer__content'>
-            <p className='footer__copyright'>Copyright &copy; 2018 Gian Sass</p>
+            <p className='footer__copyright'>Copyright &copy; 2019 Gian Sass</p>
           </div>
         </footer>
       </div>
