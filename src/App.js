@@ -24,7 +24,7 @@ class App extends Component {
       iconClass: 'fa-github'
     },
     {
-      url: 'https://giansass.com/blog',
+      url: 'https://gian-sass.com/blog',
       iconClass: 'fa-wordpress'
     },
   ];
@@ -139,7 +139,7 @@ class App extends Component {
                 Other than coding I also do graphics design and indie game development.
               </p>
               <p className='block__lead paragraph'>
-                I have a <a href='https://giansass.com/blog'>blog</a> where I write articles such as <a href='https://giansass.com/blog/mandelbrot-set-part-2-opengl-program/'>how to render the Mandelbrot set in OpenGL</a> and other interesting stuff.
+                I have a <a href='https://gian-sass.com/blog'>blog</a> where I write articles such as <a href='https://gian-sass.com/blog/mandelbrot-set-part-2-opengl-program/'>how to render the Mandelbrot set in OpenGL</a> and other interesting stuff.
               </p>
             </div>
           </section>
